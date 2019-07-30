@@ -44,3 +44,32 @@ console.log(dimas);
 console.log(yudhis);
 console.log(nida);
 console.log(milla);
+
+
+// Contoh Lain lagi
+const userOne = {
+  email: 'kakigubad@gmail.com',
+  nama: 'Gubad',
+  login() {
+    console.log(this.email, 'sudah login');
+  },
+  logout() {
+    console.log(this.email, 'sudah logout');
+  }
+};
+
+// Syntax diatas dapat dtulis menggunakan class:
+// CLASS CONSTRUCTOR:
+
+class Siswa {
+  constructor(alamatEmail, namaSiswa) {
+    this.alamatEmail = alamatEmail;
+    this.namaSiswa = namaSiswa;
+  }
+}
+
+const siswaSatu = new Siswa('dimasmillaty@gmail.com', 'dimas');
+const siswaDua = new Siswa('nidayudhistira@gmail.com', 'nida');
+
+console.log(siswaSatu);
+console.log(siswaDua);
