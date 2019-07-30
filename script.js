@@ -73,3 +73,22 @@ const siswaDua = new Siswa('nidayudhistira@gmail.com', 'nida');
 
 console.log(siswaSatu);
 console.log(siswaDua);
+
+
+// STATIC METHOD
+class StaticClassMethod {
+  constructor() {
+    console.log(this.constructor.onCall())
+  }
+  static onCall() {
+    return "ini adalah static method";
+  }
+  static onCall2() {
+    return `${this.onCall()} dipanggil dengan static method yang lain`
+  }
+}
+
+const stat = new StaticClassMethod();
+
+
+console.log(StaticClassMethod.onCall2());
