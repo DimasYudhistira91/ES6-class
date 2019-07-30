@@ -92,3 +92,61 @@ const stat = new StaticClassMethod();
 
 
 console.log(StaticClassMethod.onCall2());
+
+
+// Contoh Lain 
+class Barang {
+  constructor(nama, merk, harga) {
+    this.nama = nama;
+    this.merk = merk;
+    this.harga = harga;
+  }
+  register() {
+    console.log(this.nama+ ' sudah diregistrasi');
+  }
+}
+
+let handphone = new Barang('Redmi Note5', 'Xiaomi', 2500000);
+
+handphone.register();
+
+// Dengan Static Method:
+class Consumer {
+  constructor(nama, alamat, nomorHP) {
+    this.nama = nama;
+    this.alamat = alamat;
+    this.nomorHP = nomorHP;
+  }
+
+  static hitungCS() {
+    console.log('Di sini ada 50 CS');
+  }
+
+  register() {
+    console.log(this.nama+ ' sudah bayar utang');
+  }
+}
+
+// let cs1 = new Consumer('Karto Tuying', 'Bojong Kenyot', 08567891011);
+
+// cs1.register();
+
+// Consumer.hitungCS();
+
+
+// -----------------------------------------------------
+
+class Member extends Consumer {
+  constructor (nama, alamat, nomorHP, paketMember) {
+    super(nama, alamat, nomorHP);
+    this.paketMember = paketMember;
+  }
+  ambilPaket() {
+    console.log(this.nama+ ' sudah ambil paket ' +this.paketMember+ ' selama 1 tahun');
+  }
+}
+
+let dulKempit = new Member('Dul Kempit', 'Bojong Soang', 0875937583, 'special');
+
+// dulKempit.ambilPaket();
+dulKempit.register();
